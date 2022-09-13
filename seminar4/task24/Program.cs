@@ -7,7 +7,7 @@
 // 8 -> 36
 
 
-int ReadNumber(string message);
+int ReadNumber(string message)
 {
     Console.WriteLine(message);
     return Convert.ToInt32(Console.ReadLine());
