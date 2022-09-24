@@ -7,27 +7,25 @@
 // 1, -7, 567, 89, 223-> 3
 
 
-Console.WriteLine("Введите длину массива:");
-int lenght = Convert.ToInt32(Console.ReadLine());
-int[] array = new int[lenght];
-int count = 0;
+int countOfPositive = 0;
 
-for(int i=0; i<lenght; i++)
+while(true)
 {
-    Console.WriteLine("Введите элемент массива:");
-    array[i] = Convert.ToInt32(Console.ReadLine());
-    
-    if(array[i]>0)
+    string answer = Console.ReadLine();
+    if (answer == "stop")
     {
-        count = count+1;
+        break;
+    }
+    else
+    {
+        int.TryParse(answer, out int answerNumber);   //TryParse берёт строку answer. Если конвертация возможна, 
+        // то результат кдадётся в answerNumber. Проверяет возможна ли конвертация.
+        //int answerNumber = Convert.ToInt32(answer); //конвертируем нашу строку в число.
+        if (answerNumber > 0)
+        {
+            countOfPositive++;
+        }
     }
 }
-Console.WriteLine($"Кол-во положительных элементов: {count}");
+Console.WriteLine($"Количество положительных элементов: {countOfPositive}");
 
-
-
-// Console.WriteLine($"Кол-во положительных элементов: {count}");
-// for(int n=0; n<lenght; n++)
-// {
-//     Console.Write(" " + array[n]);
-// }
