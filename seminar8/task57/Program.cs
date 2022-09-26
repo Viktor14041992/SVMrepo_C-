@@ -52,6 +52,6 @@ int j = Convert.ToInt32(Console.ReadLine());
 int[,] matrix = new int[i, j]; 
 Console.WriteLine("Исходная матрица:");
 GetMatrix(matrix);
-Console.WriteLine("Матрица c заменой строк на столбцы:");
+Console.WriteLine(" ");
 SearchElementOfMatrix(matrix);
 
