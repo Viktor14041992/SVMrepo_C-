@@ -47,15 +47,15 @@ double Average(int[,]matrix)
     double aver = 0;
     double sum=0;
 
-    for(int j=0; j< matrix.GetLength(0); j++)
+    for(int j=0; j< matrix.GetLength(1); j++)
     {
         sum=0;
         aver = 0;
-        for(int i=0; i< matrix.GetLength(1); i++)
+        for(int i=0; i< matrix.GetLength(0); i++)
         {
             sum = sum + matrix[i,j];
         }
-        aver = sum/matrix.GetLength(1);
+        aver = sum/matrix.GetLength(0);
         Console.Write("{0,5:f1} ", aver);
         
     }
