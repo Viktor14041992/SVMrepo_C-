@@ -28,18 +28,28 @@ void GetMatrix(int[,]matrix)
 void SearchMinSumOfElements(int[,] matrix)
 {
     int min=matrix[0,0];
+    int sum = 1000;
     int Row = 0;
-    int sum = 0;
+    int temp = 0;
+    int index = 0;
     for(int i = 0; i < matrix.GetLength(0); i++)
     {
     for(int j = 0; j < matrix.GetLength(1); j++)
         {
-        sum = sum + matrix[i,j];
+        temp = temp + matrix[i,j];
         }
         Row =i;
-        Console.WriteLine($"Сумма элементов строки = {sum}");
+        Console.WriteLine($"Строка: {Row}, Сумма элементов строки = {temp}");
         Console.WriteLine();
+        if(temp<sum)
+        {
+            sum = temp;
+            index = i;
+        }
+        
     }
+        Console.WriteLine($"Искомая строка: {index}, Минимальная сумма элементов строки = {sum}");
+        Console.WriteLine();
 }
 
 
