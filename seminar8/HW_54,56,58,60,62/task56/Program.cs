@@ -28,7 +28,7 @@ void GetMatrix(int[,]matrix)
 void SearchMinSumOfElements(int[,] matrix)
 {
     int min=matrix[0,0];
-    int sum = 1000;
+    int sum = 1000000000;
     int Row = 0;
     int temp = 0;
     int index = 0;
