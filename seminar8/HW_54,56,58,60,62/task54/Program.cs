@@ -34,19 +34,24 @@ void SelectionSortMatrix(int[,] matrix)
     {
         for(int j = 0; j < matrix.GetLength(1); j++)
         {
-            int minPosition = j;
-            for(int k = j+1; k < matrix.GetLength(1)-1; k++)
+        int minPosition = j;
+        for(int k = j+1; k < matrix.GetLength(1)-1; k++)
         {
-            if(matrix[i,j] < matrix[i,minPosition]) 
+            if(matrix[j,k] < matrix[j,minPosition])
+            { 
             minPosition = k; 
-        int temp = matrix[i,j];
-        matrix[i,j] = matrix[i,minPosition];
-        matrix[i,minPosition] = temp;
-        }
+
+            }
+            // Console.WriteLine(minPosition + "        "); //позиция минимального значения
+        } 
+        int temp = matrix[i,minPosition];
+        matrix[i,minPosition] = matrix[i,j];
+        matrix[i,j] = temp;
+
         Console.Write($"{matrix[i,j]}\t");
         }
         Console.WriteLine();
-        }
+    }
 }
 
 
