@@ -24,7 +24,7 @@ while (temp <= matrix.GetLength(0) * matrix.GetLength(1))
 {
     matrix[i,j] = temp;
     temp++;
-    if (i <= j+1 && i+j <= matrix.GetLength(1) - 1) j++;
+    if (i <= j+1 && i+j < matrix.GetLength(1) - 1) j++;
     else if (i < j && i+j >= matrix.GetLength(0)-1) i++;
     else if (i >= j && i+j > matrix.GetLength(1)-1) j--;
     else i--;
@@ -39,11 +39,11 @@ void PrintMatrix(int[,] matrix)
         for (int j =0; j < matrix.GetLength(1); j++)
         {
             if (matrix[i, j] / 10 <= 0)
-                Console.Write($"{matrix[i, j]}");
+                Console.Write($"{matrix[i, j]}\t");
             
-            else Console.Write($"{matrix[i, j]}");
+            else Console.Write($"{matrix[i, j]}\t");
         }
         Console.WriteLine();
     }
 }
-PrintMatrix(GetSpiralMatrix(5));
+PrintMatrix(GetSpiralMatrix(4));
