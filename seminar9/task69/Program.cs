@@ -12,9 +12,9 @@ int ReadNumber(string message)
 int PowAtoB(int a, int b)  // метод для подсчета суммы цифр в числе
 {
     
-    if(b <= 1)
+    if(b < 1)
     {
-        return a;  //выход из рекурсии
+        return 1;  //выход из рекурсии
     }
     else
     {
