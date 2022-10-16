@@ -16,7 +16,7 @@ int[] GetArray(int size, int leftRange, int rightRange)
 
 int[] arr = GetArray(5, 0, 10);
 int[] copiedArray = new int[arr.Length];
-for(int i=0; i< arr.Length; i++);
+for(int i=0; i< arr.Length; i++)
 {
     copiedArray[i] = arr[i];
 }

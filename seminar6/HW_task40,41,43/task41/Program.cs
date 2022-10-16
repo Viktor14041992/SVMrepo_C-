@@ -11,7 +11,7 @@ int countOfPositive = 0;
 
 while(true)
 {
-    string answer = Console.ReadLine();
+    var answer = Console.ReadLine() ;
     if (answer == "stop")
     {
         break;

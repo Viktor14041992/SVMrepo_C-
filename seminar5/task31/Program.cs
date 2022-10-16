@@ -18,36 +18,56 @@ int[] GetArray(int size, int leftRange, int rightRange)
     return arr;
 }
 
-int SumPositiveElements(int[]arr)
+// int SumPositiveElements(int[]arr)
+// {
+//     int sum = 0;
+//     for(int i = 0; i < arr.Length; i++)
+//     {
+//         if(arr[i] > 0)   //если элемент положительный
+//         {
+//             sum = sum + arr[i]; //копим сумму положительных элементов
+//         //sum += arr[i]
+//         }
+//     }
+//     return sum;
+// }
+
+// int SumNegativeElements(int[]arr)
+// {
+//     int sum = 0;
+//     for(int i=0; i < arr.Length; i++)
+//     {
+//         if(arr[i] < 0)   //если элемент отрицательный
+//         {
+//             sum = sum + arr[i]; //копим сумму отрицательных элементов b
+//         }
+//     }
+//     return sum;
+// }
+
+(int , int) GetPosotiveAndNegativeSums(int[]arr)
 {
-    int sum = 0;
+    int sump = 0;
+    int sumN = 0;
+
     for(int i = 0; i < arr.Length; i++)
     {
-        if(arr[i] > 0)   //если элемент положительный
+        if(arr[i] > 0)
         {
-            sum = sum + arr[i]; //копим сумму положительных элементов
-        //sum += arr[i]
+            sump += arr[i];
+        }
+        else
+        {
+            sumN += arr[i];
         }
     }
-    return sum;
-}
-
-int SumNegativeElements(int[]arr)
-{
-    int sum = 0;
-    for(int i=0; i < arr.Length; i++)
-    {
-        if(arr[i] < 0)   //если элемент отрицательный
-        {
-            sum = sum + arr[i]; //копим сумму отрицательных элементов b
-        }
-    }
-    return sum;
+    return (sump, sumN);
 }
 
 int[] array = GetArray(12,-9, 9);
 Console.WriteLine(string.Join(", ", array));
-int SumPositive = SumPositiveElements(array);
-int SumNegative = SumNegativeElements(array);
-Console.WriteLine($"Сумма положительных элементов = {SumPositive}, Сумма отрицательных элементов = {SumNegative}");
+// int SumPositive = SumPositiveElements(array);
+// int SumNegative = SumNegativeElements(array);
+(int sumPositive, int sumNegative) = GetPosotiveAndNegativeSums(array);
+Console.WriteLine($"Сумма положительных элементов = {sumPositive}, Сумма отрицательных элементов = {sumNegative}");
 

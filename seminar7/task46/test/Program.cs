@@ -1,7 +1,5 @@
 ﻿// решение задачи 48 на примере одномерного массива
 
-
-
 int[] GetArray(int size, int leftRange, int rightRange)
 {
     int[] arr = new int [size];

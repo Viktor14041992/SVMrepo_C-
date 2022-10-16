@@ -13,14 +13,22 @@ int number1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите второе число: ");
 int number2 = Convert.ToInt32(Console.ReadLine());
 
+if (number2 != 0)
+{
 int res = number1 % number2;
 
-if (res == 0)
-{
-    Console.WriteLine("Кратно");
+    if (res == 0)
+    {
+        Console.WriteLine("Кратно");
+    }
+    else
+    {
+        Console.WriteLine($"Не кратно, остаток - {res}.");
+    }
 }
 else
 {
-    Console.WriteLine($"Не кратно, остаток - {res}.");
+    Console.WriteLine("Нельзя делить на 0!");
 }
+
 

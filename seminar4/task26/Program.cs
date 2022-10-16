@@ -12,14 +12,13 @@ int ReadNumber(string message)
 }
 int countNumbers(int n)
 {
-    
-    int sum = 0;
-    for (int i=0; n > 0 ; i++)
+
+    int i = 0;
+    for (i = 0; n > 0 ; i++)
     {
         n = n / 10;
-        sum = sum + 1;
     }
-    return sum;
+    return i;
     
 }
 int number = ReadNumber("Введите число ");
