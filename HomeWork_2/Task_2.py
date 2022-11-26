@@ -6,7 +6,7 @@
 
 n = int(input('Введите число'))
 prod = 1
-for i in range(0, n):
+for i in range(n):
     prod *= (n-i)
 print(prod)
 
