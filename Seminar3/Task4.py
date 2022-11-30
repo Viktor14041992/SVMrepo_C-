@@ -26,3 +26,11 @@ if f:
 else:
     print('нет')
 
+# метод Any:
+
+#list = []
+#print('Введите элементы списка: ')
+#for i in range(5):
+#   list.append(input())
+# if any('12' in el for el in list):
+#   print('да')
