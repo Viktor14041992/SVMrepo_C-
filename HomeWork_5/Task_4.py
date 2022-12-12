@@ -26,7 +26,7 @@ def shifr():
     sp2.append(str(count) + sp[-1])
     print(sp2)
     with open('task_4_Shifr.txt', 'w') as data:
-        data.write(str(sp2))
+        data.write(''.join(sp2))
 
 def deshifr():
     global count_list
@@ -36,9 +36,14 @@ def deshifr():
     print()
     print(sp2)
     sp = []
-    count = 1
-    sp = (''.join(map(str, sp2)))
-    print()
+    digit = ""
+    for i in range(0, len(sp2)):
+        if sp2[i].isdigit():
+            digit += sp2[i]
+        else:
+            sp += (sp2[i] * int(digit))
+
     print(sp)
 
 shifr()
+deshifr()
