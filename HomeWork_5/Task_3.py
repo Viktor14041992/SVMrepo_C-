@@ -27,9 +27,8 @@ def player1_turning():
     print("Ваш ход, крестики!")
     string_number = int(input('Введите номер строки'))
     column_number = int(input('Введите номер столбца'))
-    if 0 >= string_number >= 2 and 0 >= column_number >= 2 and sp[string_number][column_number] != '-':
-        while 0 >= string_number >= 2 and 0 >= column_number >= 2 and sp[string_number][column_number] != '-':
-            print('Выберете координату')
+    while string_number > 2 or column_number > 2 or sp[string_number][column_number] != '-':
+            print('Попробуйте снова!')
             string_number = int(input('Введите номер строки'))
             column_number = int(input('Введите номер столбца'))
 
@@ -48,11 +47,10 @@ def player2_turning():
     print("Ваш ход, нолики!")
     string_number = int(input('Введите номер строки'))
     column_number = int(input('Введите номер столбца'))
-    if 0 >= string_number >= 2 and 0 >= column_number >= 2 and sp[string_number][column_number] != '-':
-        while 0 >= string_number >= 2 and 0 >= column_number >= 2 and sp[string_number][column_number] != '-':
-            print('Выберете координату')
-            string_number = int(input('Введите номер строки'))
-            column_number = int(input('Введите номер столбца'))
+    while string_number > 2 or column_number > 2 or sp[string_number][column_number] != '-':
+        print('Попробуйте снова!')
+        string_number = int(input('Введите номер строки'))
+        column_number = int(input('Введите номер столбца'))
 
     sp[string_number][column_number] = '0'
     print(*sp, sep='\n')
