@@ -36,14 +36,16 @@ def deshifr():
     print()
     print(sp2)
     sp = []
-    digit = ""
+    digit = ''
     for i in range(0, len(sp2)):
         if sp2[i].isdigit():
             digit += sp2[i]
         else:
-            sp += (sp2[i] * int(digit))
-
-    print(sp)
-
+            sp += sp2[i] * int(digit)
+            digit = ''
+    print()
+    print(''.join(sp))
+    with open('task_4_DeShifr.txt', 'w') as data:
+        data.write(''.join(sp))
 shifr()
 deshifr()
