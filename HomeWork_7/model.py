@@ -7,3 +7,8 @@ def import_data():
         return list(reader)
 
 
+def export_data():
+    with open('file.csv', encoding="utf8") as csvfile:
+        reader = csv.reader(csvfile, delimiter=' ', )
+        return list(reader)
+
