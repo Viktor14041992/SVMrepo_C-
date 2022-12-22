@@ -75,12 +75,12 @@ def import_csv():
             count += 1
 
 
-def export_csv(file, new_file):
-    file2 = input(f'{new_file}, введите имя файла')
-    with open(file2, mode="w", encoding='utf-8') as w_file:
-        file_writer = csv.DictReader(w_file, delimiter=";", lineterminator='\r')
-        file_writer.writerow(['Фамилия', 'Имя', 'Телефон', 'Описание'])
-        for row in file:
+def export_csv():
+    file_name = input('Введите имя файла: ')
+    with open('file.csv', "r", encoding="utf8") as r_file, \
+            open(file_name + '.csv', 'w', encoding="utf8") as new_file:
+        file_reader = csv.reader(r_file, delimiter=";")
+        file_writer = csv.writer(new_file, delimiter=';', lineterminator="\r")
+        for row in file_reader:
             file_writer.writerow(row)
-        print(f'данные записаны в файл {new_file}')
 
