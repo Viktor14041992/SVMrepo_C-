@@ -1,0 +1,16 @@
+APScheduler==3.6.3
+cachetools==4.2.2
+certifi==2022.12.7
+Pillow==9.3.0
+python-telegram-bot==13.14
+pytz==2022.7
+pytz-deprecation-shim==0.1.0.post0
+six==1.16.0
+tornado==6.1
+tzdata==2022.7
+tzlocal==4.2
+
+
+#pip install -r requirements.txt - для прочтения  Бот: t.me/gb_test1242022_bot.
+
+
